@@ -1,0 +1,17 @@
+{
+    "name": "takaram/simple-di-container",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Takaram\\SimpleDiContainer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Takuya Aramaki",
+            "email": "takaram71@gmail.com"
+        }
+    ],
+    "require": {}
+}
