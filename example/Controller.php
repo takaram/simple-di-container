@@ -5,12 +5,18 @@ namespace Takaram\SimpleDiContainerExample;
 
 class Controller
 {
-    public function __construct()
+    public function __construct(
+        private Service $service,
+        private Logger $logger,
+    )
     {
     }
 
     public function index(): string
     {
-        return "Hello, world!";
+        $this->logger->info('Controller::index が呼ばれました。');
+
+        $name = $this->service->execute();
+        return "Hello, {$name}!";
     }
 }
