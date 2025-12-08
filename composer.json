@@ -4,7 +4,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Takaram\\SimpleDiContainer\\": "src/"
+            "Takaram\\SimpleDiContainer\\": "src/",
+            "Takaram\\SimpleDiContainerExample\\": "example/"
         }
     },
     "authors": [
