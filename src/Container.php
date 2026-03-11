@@ -15,7 +15,7 @@ class Container
         $args = [];
         foreach ($constructor->getParameters() as $param) {
             $parameterClass = $param->getType()->getName();
-            $args[] = new $parameterClass();
+            $args[] = $this->get($parameterClass);
         }
 
         return new $className(...$args);

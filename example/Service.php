@@ -5,12 +5,16 @@ namespace Takaram\SimpleDiContainerExample;
 
 class Service
 {
-    public function __construct()
+    public function __construct(
+        private Logger $logger,
+    )
     {
     }
 
     public function execute(): string
     {
+        $this->logger->info('Service::execute が呼ばれました。');
+
         return "world";
     }
 }
