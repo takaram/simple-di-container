@@ -7,8 +7,16 @@ use ReflectionClass;
 
 class Container
 {
+    public function __construct(private array $map = [])
+    {
+    }
+
     public function get(string $className): mixed
     {
+        if (isset($this->map[$className])) {
+            return $this->get($this->map[$className]);
+        }
+
         $reflectionClass = new ReflectionClass($className);
         $constructor = $reflectionClass->getConstructor();
 

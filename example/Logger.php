@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Takaram\SimpleDiContainerExample;
 
-class Logger
+class Logger implements LoggerInterface
 {
     public function __construct()
     {

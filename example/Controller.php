@@ -7,7 +7,7 @@ class Controller
 {
     public function __construct(
         private Service $service,
-        private Logger $logger,
+        private LoggerInterface $logger,
     )
     {
     }

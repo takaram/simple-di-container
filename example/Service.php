@@ -6,7 +6,7 @@ namespace Takaram\SimpleDiContainerExample;
 class Service
 {
     public function __construct(
-        private Logger $logger,
+        private LoggerInterface $logger,
     )
     {
     }
